@@ -62,7 +62,7 @@ public class UsersAuthenticationController {
             return "register/User";
         }
 
-        User existingUser = userrepository.findByEmail(User.getEmail()); //This isn't being picked up
+        User existingUser = userrepository.findByEmail(User.getEmail());
 
         if (existingUser != null) {
             errors.rejectValue("email", "email.alreadyexists", "A user with that email already exists");
